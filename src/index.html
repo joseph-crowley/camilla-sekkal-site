@@ -11,65 +11,99 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
     
+    :root {
+      --color-primary: #2c3e50;        /* Dark Blue-Gray */
+      --color-secondary: #34495e;      /* Muted Navy */
+      --color-accent: #2980b9;         /* Rich Blue */
+      --color-accent-hover: #3498db;   /* Brighter Blue */
+      --color-background: #f8f9fa;     /* Soft Light Gray */
+      --color-text: #333333;           /* Dark Text */
+      --color-white: #ffffff;          /* Pure White */
+      --shadow-soft: rgba(0,0,0,0.15);
+      --overlay-bg: rgba(44, 62, 80, 0.6); /* Semi-transparent overlay */
+    }
+    
     body {
       font-family: 'Inter', sans-serif;
-      color: #333;
+      color: var(--color-text);
+      background-color: var(--color-background);
+      margin: 0;
     }
-
+    
     .hero {
-      background: linear-gradient(to right, rgba(28,216,210,0.8), rgba(255,123,172,0.8)), url('background.jpg') no-repeat center center / cover;
+      background: url('background.jpg') no-repeat center center / cover;
       height: 100vh;
-      color: white;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      color: var(--color-white);
+      text-shadow: 0 2px 6px var(--shadow-soft);
       display: flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
     }
 
+    .hero-content {
+      background-color: var(--overlay-bg); /* Added semi-transparent background */
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px var(--shadow-soft);
+      backdrop-filter: blur(4px); /* Optional subtle blur effect */
+    }
+    
     .portrait {
-      width: 200px;
-      height: 200px;
+      width: 300px; /* Increased from 200px to 300px */
+      height: 300px; /* Increased from 200px to 300px */
       object-fit: cover;
+      object-position: center;
       border-radius: 50%;
-      border: 5px solid #fff;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      margin-bottom: 1rem;
-    }
-
+      border: 5px solid var(--color-white);
+      box-shadow: 0 8px 24px var(--shadow-soft);
+      margin-bottom: 2rem;
+      image-rendering: optimizeQuality; /* Ensures higher-quality rendering */
+    } 
     .section {
-      padding: 5rem 0;
+      padding: 4rem 2rem;
+      background-color: var(--color-white);
     }
-
+    
     .cta-btn {
-      background-color: #ff7bac;
+      background-color: var(--color-accent);
+      color: var(--color-white);
       border: none;
-      transition: all 0.3s ease;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
+    
     .cta-btn:hover {
-      background-color: #1cd8d2;
+      background-color: var(--color-accent-hover);
+      transform: translateY(-2px);
     }
-
+    
     .floating-btn {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background-color: #ff7bac;
-      color: #fff;
+      background-color: var(--color-accent);
+      color: var(--color-white);
       width: 60px;
       height: 60px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px var(--shadow-soft);
+      transition: background-color 0.3s ease, transform 0.3s ease;
       z-index: 1000;
+      cursor: pointer;
+    }
+    
+    .floating-btn:hover {
+      background-color: var(--color-accent-hover);
+      transform: scale(1.1);
     }
 
-    .floating-btn:hover {
-      transform: scale(1.15);
-      background-color: #1cd8d2;
-    }
   </style>
 </head>
 
@@ -77,13 +111,13 @@
 
   <!-- Hero Section -->
   <section class="hero text-center animate__animated animate__fadeIn">
-    <div class="container">
+    <div class="container hero-content">
       <img src="portrait.jpg" alt="Janet Crowley" class="portrait animate__animated animate__fadeInDown animate__delay-1s">
       <h1 class="display-4 fw-bold animate__animated animate__fadeInUp animate__delay-2s">Find Clarity. Embrace Possibility.</h1>
       <p class="lead animate__animated animate__fadeInUp animate__delay-3s">
         Guiding you through life's transitions with calm, curiosity, and positive energy.
       </p>
-      <a href="mailto:janetcrowley@wrealestate.net" class="btn btn-lg cta-btn text-white mt-3 animate__animated animate__pulse animate__delay-4s">
+      <a href="mailto:janet.crowley1@gmail.net" class="btn btn-lg cta-btn text-white mt-3 animate__animated animate__pulse animate__delay-4s">
         Schedule Your Complimentary Session
       </a>
     </div>
@@ -110,7 +144,7 @@
           <p>Navigate new professional paths with confidence and clarity.</p>
         </div>
         <div class="col-md-4 text-center">
-          <i class="bi bi-heart-fill display-4 mb-3 text-danger"></i>
+          <i class="bi bi-signpost-split display-4 mb-3 text-danger"></i>
           <h5>Life Changes</h5>
           <p>Rediscover your passion as you step into retirement or embrace an empty nest.</p>
         </div>
@@ -144,14 +178,14 @@
       <p class="mb-4 mx-auto" style="max-width:700px;">
         Your next meaningful chapter is just one conversation away. Connect today and start your journey toward clarity and fulfillment.
       </p>
-      <a href="mailto:janetcrowley@wrealestate.net" class="btn btn-lg cta-btn text-white">
+      <a href="mailto:janet.crowley1@gmail.net" class="btn btn-lg cta-btn text-white">
         Connect with Janet
       </a>
     </div>
   </section>
 
   <!-- Floating Email Button -->
-  <a href="mailto:janetcrowley@wrealestate.net" class="floating-btn">
+  <a href="mailto:janet.crowley1@gmail.net" class="floating-btn">
     <i class="bi bi-envelope-fill"></i>
   </a>
 
