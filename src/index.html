@@ -1,164 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Janet Crowley | Personal & Professional Coaching</title>
-    <!-- Bootstrap 5.3.3 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <!-- Animate.css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <style>
-      .hero-section {
-        position: relative;
-        background: url("background.jpg") no-repeat center center;
-        background-size: cover;
-        height: 100vh;
-        color: #fff;
-      }
-      .hero-overlay {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-      }
-      .hero-content {
-        position: relative;
-        z-index: 2;
-      }
-      .floating-cta {
-        position: fixed;
-        bottom: 20px; right: 20px;
-        z-index: 1050;
-      }
-      .section {
-        padding: 4rem 0;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center">
-      <div class="hero-overlay"></div>
-      <div class="container text-center hero-content">
-        <h1 class="display-4 animate__animated animate__fadeInDown">
-          Unlock Your Potential with Personalized Coaching
-        </h1>
-        <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
-          ICF-Certified Coach Janet Crowley empowers you to define your vision, navigate challenges, and achieve lasting success.
-        </p>
-      </div>
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Janet Crowley | Transformative Personal & Professional Coaching</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+    }
 
-    <!-- About Janet -->
-    <section id="about" class="section bg-light">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8 offset-lg-2 text-center">
-            <h2 class="mb-4 animate__animated animate__fadeInUp">
-              Meet Your Coach: Janet Crowley
-            </h2>
-            <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
-              Janet Crowley is an ICF-certified personal and professional coach with deep roots in Sonoma County. With a business degree from UC Berkeley and extensive experience in human resources and strategic management, Janet specializes in guiding clients to clarify their goals, develop strategic plans, and thrive personally and professionally.
-            </p>
-            <p class="animate__animated animate__fadeInUp animate__delay-2s">
-              Born in San Francisco and raised in Petaluma, Janet’s commitment to her community and her passion for personal growth inform her empathetic, effective coaching style.
-            </p>
-          </div>
+    .hero {
+      background: linear-gradient(to right, rgba(28,216,210,0.8), rgba(255,123,172,0.8)), url('background.jpg') no-repeat center center / cover;
+      height: 100vh;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+    }
+
+    .portrait {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .cta-btn {
+      background-color: #ff7bac;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #1cd8d2;
+    }
+
+    .floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #ff7bac;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .floating-btn:hover {
+      transform: scale(1.15);
+      background-color: #1cd8d2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero text-center animate__animated animate__fadeIn">
+    <div class="container">
+      <img src="portrait.jpg" alt="Janet Crowley" class="portrait animate__animated animate__fadeInDown animate__delay-1s">
+      <h1 class="display-4 fw-bold animate__animated animate__fadeInUp animate__delay-2s">Find Clarity. Embrace Possibility.</h1>
+      <p class="lead animate__animated animate__fadeInUp animate__delay-3s">
+        Guiding you through life's transitions with calm, curiosity, and positive energy.
+      </p>
+      <a href="mailto:janetcrowley@wrealestate.net" class="btn btn-lg cta-btn text-white mt-3 animate__animated animate__pulse animate__delay-4s">
+        Schedule Your Complimentary Session
+      </a>
+    </div>
+  </section>
+
+  <!-- About Janet -->
+  <section class="section bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4 animate__animated animate__fadeInUp">Meet Your Coach: Janet Crowley</h2>
+      <p class="mx-auto" style="max-width:750px;">
+        As an ICF-certified personal and professional coach, Janet specializes in supporting federal employees, leadership cohorts, soon-to-be retirees, empty nesters, and anyone standing at life's crossroads. Her calming presence and insightful questioning illuminate pathways toward meaningful change and renewed purpose.
+      </p>
+    </div>
+  </section>
+
+  <!-- Specializations -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5 animate__animated animate__fadeInUp">Coaching That Meets You Where You Are</h2>
+      <div class="row justify-content-center animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="col-md-4 text-center">
+          <i class="bi bi-briefcase-fill display-4 mb-3 text-primary"></i>
+          <h5>Career Transitions</h5>
+          <p>Navigate new professional paths with confidence and clarity.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-heart-fill display-4 mb-3 text-danger"></i>
+          <h5>Life Changes</h5>
+          <p>Rediscover your passion as you step into retirement or embrace an empty nest.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-compass-fill display-4 mb-3 text-success"></i>
+          <h5>Leadership Growth</h5>
+          <p>Empowering leadership and professional cohorts toward authentic success.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Coaching Services -->
-    <section id="services" class="section">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-8 offset-md-2">
-            <h2 class="mb-4 animate__animated animate__fadeInUp">How Janet Can Help You</h2>
-            <ul class="list-group list-group-flush animate__animated animate__fadeInUp animate__delay-1s">
-              <li class="list-group-item">Personalized career coaching and leadership development</li>
-              <li class="list-group-item">Real estate goal-setting and transaction guidance</li>
-              <li class="list-group-item">Effective communication and negotiation strategies</li>
-              <li class="list-group-item">Work-life balance coaching to foster personal fulfillment</li>
-            </ul>
-          </div>
+  <!-- Testimonial -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="card shadow-lg border-0 animate__animated animate__fadeInUp">
+        <div class="card-body text-center">
+          <blockquote class="blockquote mb-0">
+            <p>"Janet helped me see opportunities I never imagined. Her calm, empathetic coaching made all the difference."</p>
+            <footer class="blockquote-footer mt-3">A Satisfied Client</footer>
+          </blockquote>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Testimonial -->
-    <section id="testimonial" class="section bg-light">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="card shadow border-0 animate__animated animate__fadeInUp">
-              <div class="card-body">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-3">
-                    “Janet’s calm approach and attentive listening helped me clearly identify my goals and navigate challenges with confidence. Her insights were invaluable, leading to tangible results in both my professional and personal life.”
-                  </p>
-                  <footer class="blockquote-footer">Coaching Client</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Call to Action -->
+  <section class="section text-center">
+    <div class="container animate__animated animate__fadeInUp">
+      <h2 class="fw-bold mb-4">Ready to Explore What's Possible?</h2>
+      <p class="mb-4 mx-auto" style="max-width:700px;">
+        Your next meaningful chapter is just one conversation away. Connect today and start your journey toward clarity and fulfillment.
+      </p>
+      <a href="mailto:janetcrowley@wrealestate.net" class="btn btn-lg cta-btn text-white">
+        Connect with Janet
+      </a>
+    </div>
+  </section>
 
-    <!-- Janet's Approach -->
-    <section id="approach" class="section">
-      <div class="container text-center">
-        <h2 class="mb-4 animate__animated animate__fadeInUp">Janet’s Coaching Philosophy</h2>
-        <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
-          Janet believes coaching is a collaborative journey. By understanding your unique strengths, values, and aspirations, she creates a tailored coaching experience designed to empower your personal growth and success.
-        </p>
-      </div>
-    </section>
+  <!-- Floating Email Button -->
+  <a href="mailto:janetcrowley@wrealestate.net" class="floating-btn">
+    <i class="bi bi-envelope-fill"></i>
+  </a>
 
-    <!-- Contact / CTA -->
-    <section id="contact" class="section bg-light">
-      <div class="container text-center">
-        <h2 class="mb-4 animate__animated animate__fadeInUp">Ready to Take the Next Step?</h2>
-        <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
-          Schedule your complimentary consultation and discover how coaching can transform your life.
-        </p>
-        <a href="https://calendly.com/camilla-sekkal/connecting-calls" class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite">
-          Schedule a Consultation
-        </a>
-      </div>
-    </section>
-
-    <!-- Floating CTA Button -->
-    <a
-      href="https://calendly.com/camilla-sekkal/connecting-calls"
-      class="btn btn-primary btn-lg rounded-circle floating-cta animate__animated animate__pulse animate__infinite"
-      title="Schedule a Consultation"
-      role="button"
-      style="width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
-      <span class="visually-hidden">Schedule a Call</span>
-      <i class="bi bi-calendar-check" style="font-size:1.5rem;"></i>
-    </a>
-
-    <!-- Bootstrap 5 JS Bundle -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous">
-    </script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
 
